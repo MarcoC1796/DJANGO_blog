@@ -13,7 +13,7 @@ class Profile(models.Model):
     # Overriding the parent save method
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
-
+        
         # Resizing image
         img = Image.open(self.image.path)
 
